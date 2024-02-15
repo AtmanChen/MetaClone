@@ -7,7 +7,7 @@ let package = Package(
     name: "Features",
 		defaultLocalization: "en",
 		platforms: [
-			.iOS(.v15)
+			.iOS(.v16)
 		],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -22,6 +22,7 @@ let package = Package(
 				.library(name: "FriendsFeature", targets: ["FriendsFeature"]),
 				.library(name: "MarketPlaceFeature", targets: ["MarketPlaceFeature"]),
 				.library(name: "MenuFeature", targets: ["MenuFeature"]),
+				.library(name: "ProfileFeature", targets: ["ProfileFeature"]),
     ],
 		dependencies: [
 			.package(path: "../UIComponents"),
@@ -73,8 +74,11 @@ let package = Package(
 				.target(
 					name: "FeedFeature",
 					dependencies: [
+						"ProfileFeature",
 						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
 						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
+						.product(name: "DividerView", package: "UIComponents"),
 					]
 				),
 				.target(
@@ -82,6 +86,7 @@ let package = Package(
 					dependencies: [
 						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
 						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
 					]
 				),
 				.target(
@@ -89,6 +94,7 @@ let package = Package(
 					dependencies: [
 						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
 						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
 					]
 				),
 				.target(
@@ -96,6 +102,7 @@ let package = Package(
 					dependencies: [
 						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
 						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
 					]
 				),
 				.target(
@@ -103,7 +110,17 @@ let package = Package(
 					dependencies: [
 						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
 						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
 					]
-				)
+				),
+				.target(
+					name: "ProfileFeature",
+					dependencies: [
+						.product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+						.product(name: "AnalyticsClient", package: "Deps"),
+						.product(name: "Colors", package: "UIComponents"),
+					]
+				),
+				
     ]
 )

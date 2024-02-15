@@ -24,16 +24,17 @@ public struct RootNavigationLogic {
 		case marketPlace
 		case menu
 	}
+	
 	public struct State: Equatable {
-		@BindingState var tabSelection = Tab.feed
 		public init() {}
+		@BindingState var tabSelection = Tab.feed
 		var feed = FeedLogic.State()
 		var video = VideoLogic.State()
 		var friends = FriendsLogic.State()
 		var marketPlace = MarketPlaceLogic.State()
 		var menu = MenuLogic.State()
 	}
-	public enum Action: Equatable, BindableAction {
+	public enum Action: BindableAction {
 		case feed(FeedLogic.Action)
 		case video(VideoLogic.Action)
 		case friends(FriendsLogic.Action)

@@ -22,7 +22,7 @@ public struct AppLogic {
 			view = View.State.navigation()
 		}
 	}
-	public enum Action: Equatable {
+	public enum Action {
 		case appDelegate(AppDelegateLogic.Action)
 		case view(View.Action)
 	}
@@ -45,7 +45,7 @@ public struct AppLogic {
 			case onboard(OnboardLogic.State = .init())
 			case navigation(RootNavigationLogic.State = .init())
 		}
-		public enum Action: Equatable {
+		public enum Action {
 			case launch(LaunchLogic.Action)
 			case onboard(OnboardLogic.Action)
 			case navigation(RootNavigationLogic.Action)
