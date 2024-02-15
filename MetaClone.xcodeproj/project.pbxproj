@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71EF66492B537B1E007A16BD /* MetaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF66482B537B1E007A16BD /* MetaCloneApp.swift */; };
-		71EF664B2B537B1E007A16BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF664A2B537B1E007A16BD /* ContentView.swift */; };
+		716064092B7E2271002D0628 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 716064082B7E2271002D0628 /* AppFeature */; };
+		71EF66492B537B1E007A16BD /* MetaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF66482B537B1E007A16BD /* MetaApp.swift */; };
 		71EF664D2B537B20007A16BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EF664C2B537B20007A16BD /* Assets.xcassets */; };
 		71EF66502B537B20007A16BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EF664F2B537B20007A16BD /* Preview Assets.xcassets */; };
 		71EF665A2B537B20007A16BD /* MetaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EF66592B537B20007A16BD /* MetaCloneTests.swift */; };
@@ -34,9 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		716064032B7DF974002D0628 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
+		716064052B7E0108002D0628 /* Deps */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Deps; sourceTree = "<group>"; };
+		716064062B7E171E002D0628 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
 		71EF66452B537B1E007A16BD /* MetaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71EF66482B537B1E007A16BD /* MetaCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaCloneApp.swift; sourceTree = "<group>"; };
-		71EF664A2B537B1E007A16BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71EF66482B537B1E007A16BD /* MetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaApp.swift; sourceTree = "<group>"; };
 		71EF664C2B537B20007A16BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71EF664F2B537B20007A16BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71EF66552B537B20007A16BD /* MetaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716064092B7E2271002D0628 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,13 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		716064072B7E2271002D0628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71EF663C2B537B1E007A16BD = {
 			isa = PBXGroup;
 			children = (
+				716064052B7E0108002D0628 /* Deps */,
+				716064032B7DF974002D0628 /* Features */,
+				716064062B7E171E002D0628 /* UIComponents */,
 				71EF66472B537B1E007A16BD /* MetaClone */,
 				71EF66582B537B20007A16BD /* MetaCloneTests */,
 				71EF66622B537B20007A16BD /* MetaCloneUITests */,
 				71EF66462B537B1E007A16BD /* Products */,
+				716064072B7E2271002D0628 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +108,7 @@
 		71EF66472B537B1E007A16BD /* MetaClone */ = {
 			isa = PBXGroup;
 			children = (
-				71EF66482B537B1E007A16BD /* MetaCloneApp.swift */,
-				71EF664A2B537B1E007A16BD /* ContentView.swift */,
+				71EF66482B537B1E007A16BD /* MetaApp.swift */,
 				71EF664C2B537B20007A16BD /* Assets.xcassets */,
 				71EF664E2B537B20007A16BD /* Preview Content */,
 			);
@@ -143,6 +156,9 @@
 			dependencies = (
 			);
 			name = MetaClone;
+			packageProductDependencies = (
+				716064082B7E2271002D0628 /* AppFeature */,
+			);
 			productName = MetaClone;
 			productReference = 71EF66452B537B1E007A16BD /* MetaClone.app */;
 			productType = "com.apple.product-type.application";
@@ -257,8 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EF664B2B537B1E007A16BD /* ContentView.swift in Sources */,
-				71EF66492B537B1E007A16BD /* MetaCloneApp.swift in Sources */,
+				71EF66492B537B1E007A16BD /* MetaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +444,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +473,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +599,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		716064082B7E2271002D0628 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71EF663D2B537B1E007A16BD /* Project object */;
 }
